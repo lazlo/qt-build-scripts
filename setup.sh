@@ -8,7 +8,7 @@ main() {
 		git clone git://code.qt.io/qt/qt5.git
 	fi
 
-	DEST_DIR=qt-build
+	NATIVE_DEST_DIR="qt-build-$(uname -m)"
 
 	cd qt5
 	git checkout v5.12.0
@@ -16,10 +16,10 @@ main() {
 	git clean -xfd
 	cd -
 
-	rm -rf $DEST_DIR
-	mkdir -p $DEST_DIR
+	rm -rf $NATIVE_DEST_DIR
+	mkdir -p $NATIVE_DEST_DIR
 
-	cd $DEST_DIR
+	cd $NATIVE_DEST_DIR
 	../qt5/configure -developer-build -opensource -confirm-license -nomake examples -nomake tests
 	qmake
 	make -j$(nproc)
