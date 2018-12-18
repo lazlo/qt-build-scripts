@@ -11,7 +11,9 @@ main() {
 	cd qt5
 	git checkout v5.12.0
 	perl init-repository
-	./configure -developer-build -opensource -confirm-license -nomake examples -nomake tests
+	rm -rf out
+	mkdir -p out
+	./configure -developer-build -opensource -confirm-license -nomake examples -nomake tests -prefix $(pwd)/out
 	make -j$(nproc)
 	cd -
 }
