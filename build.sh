@@ -20,7 +20,7 @@ build_native() {
 build_target() {
 	TARGET_DEST_DIR="qt-build-am43x"
 	QT_TARGET_DEVICE=linux-beagleboard-g++
-	TOOLCHAIN_DIR=/home/lazlo/opt/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabih
+	TOOLCHAIN_DIR=/home/lazlo/opt/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabihf
 
 	rm -rf $TARGET_DEST_DIR
 	mkdir -p $TARGET_DEST_DIR
