@@ -1,4 +1,4 @@
-# SOLO Qt
+# Qt Build Scripts
 
 ```
 sudo ./install-deps.sh
